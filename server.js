@@ -9,7 +9,7 @@ const app = express();
 const port = 3000;
 
 const messages = [];
-const gemini_api_key = "AIzaSyCedk7pWXZNeLgM0X9K5XzqOiiFOZcnm5E"; // Make sure to set this in your .env file
+const gemini_api_key = process.env.GEMINI_API_KEY;
 const googleAI = new GoogleGenerativeAI(gemini_api_key);
 const geminiConfig = {
   temperature: 0.9,
